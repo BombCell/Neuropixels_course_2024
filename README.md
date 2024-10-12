@@ -1,6 +1,6 @@
 # Neuropixels course 2024 - quality control
 
-This repository contains all resources and assignments for the quality control part of [UCL's 2024 Neuropixels Course](https://www.ucl.ac.uk/neuropixels/training/2024-neuropixels-course). If you run into any issues or have any questions, you can send a message on the #2_2-quality-control channel of the 2024 UCL Neuropixels Cours slack or create a github issue here. 
+This repository contains all resources and assignments for the quality control part of [UCL's 2024 Neuropixels Course](https://www.ucl.ac.uk/neuropixels/training/2024-neuropixels-course). If you run into any issues or have any questions, you can send a message on the #2_2-quality-control channel of the 2024 UCL Neuropixels Course slack or create a github issue here. 
 
 We will go over a typical worksflow to assess unit quality using bombcell and phy. Happy quality control-ing! 
 
