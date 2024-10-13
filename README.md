@@ -95,7 +95,7 @@ When you have run everything, Bombcell will have saved several files locally, an
     - a parquet file containing parameters for each quality metric: _bc_parameters._bc_qMetrics.parquet
     - npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
     - a npy file indicated which spikes were detected as duplicates by bombcell: spikes._bc_duplicateSpikes.npy
-    
+
 <img src="./images/bombcell_outputs.png" width="100%">
 
 ```diff
@@ -107,16 +107,18 @@ When you have run everything, Bombcell will have saved several files locally, an
 #### Look at bombcell's output plots!
 Bombcell will output 3 types of plots that can help you get a very quick idea of how well it is performing and if any of the thresholds need to be tweaked.  
 
-1. Waveform overview 
-The plot will look something like the one below and allows you to quickly see whether the algorithm is classifying noise and non-somatic units correctly. 
+1. Waveform overview
+   
+The plot should look similar to the example one below (but yours will be slightly different!). This plot allows you to quickly see whether the algorithm is classifying noise and non-somatic units correctly. 
 <img src="./images/output_wvf.png" width="100%">
 
 ```diff
 - Do the waveforms look well classified (are noise units, noisy, ect.)? 
 ```
 
-2. UpSet plots 
-These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing.
+2. UpSet plots
+   
+These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing. The plots should look similar to the example ones below (but yours will be slightly different!).
 
 ```diff
 + Inspect the plots
@@ -132,7 +134,9 @@ These plots show the intersections and relationships between multiple sets of da
 | <img src="./images/output_upset_noise.png" width="100%"> |  <img src="./images/output_upset_non-soma.png" width="100%"> |  <img src="./images/output_upset_mua.png" width="100%"> |
 
 3. Histograms of the distributions for each quality metric
+   
 The lines at the bottom indicate how the untis are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
+The plot should look similar to the example one below (but yours will be slightly different!).
 <img src="./images/output_hg.png" width="100%">
 
 #### Look at bombcell's GUI 
