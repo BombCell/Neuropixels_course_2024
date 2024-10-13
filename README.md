@@ -99,7 +99,7 @@ When you have run everything, Bombcell will have saved several files locally, an
 <img src="./images/bombcell_outputs.png" width="100%">
 
 ```diff
-+ Run section 4 (Examples - accessing bombcell's metrics) to understand how the data is saved and how it can be used. 
++ Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
 ```
 
 ### Setting thresholds, checking bomcbell performance and refining
@@ -126,9 +126,10 @@ These plots show the intersections and relationships between multiple sets of da
 - Are there any metrics that remove too many (i.e. the majority) of units?
 - Are there any metrics that remove no units?
 ```
-<img src="./images/output_upset_noise.png" width="100%">
-<img src="./images/output_upset_non-soma.png" width="100%">
-<img src="./images/output_upset_mua.png" width="100%">
+
+|  | | |
+|-----|-------|-----|
+| <img src="./images/output_upset_noise.png" width="100%"> |  <img src="./images/output_upset_non-soma.png" width="100%"> |  <img src="./images/output_upset_mua.png" width="100%"> |
 
 3. Histograms of the distributions for each quality metric
 The lines at the bottom indicate how the untis are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
@@ -137,8 +138,15 @@ The lines at the bottom indicate how the untis are classified based on the metri
 #### Look at bombcell's GUI 
 
 ```diff
-+ Run section 5: Inspect to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
-+ flip through a few units (using the arrow keys on your keyboard)
++ Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
++ flip through a few units using your keyboard to navigate:
++         left/right arrow: toggle between units 
++         g : go to next good unit 
++         m : go to next multi-unit 
++         n : go to next noise unit
++         a : go to next non-somatic unit ('a' is for aonxal)
++         up/down arrow: toggle between time chunks in the raw data
++         u: brings up a input dialog to enter the unit you want to go to
 ```
 <img src="./images/gui.png" width="100%">
 
