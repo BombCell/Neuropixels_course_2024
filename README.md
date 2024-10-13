@@ -153,7 +153,8 @@ The lines at the bottom indicate how the untis are classified based on the metri
 #### Look at and refine the outputs in phy
 
 Once bombcell is run, its outputs are also automatically loaded in phy.
-Load up phy and take a look. 
+Load up phy and take a look at all the columns you have in ClusterView - they correspond to bombcell's quality metrics. 
+
 ```diff
 - Sort units by the 'spatial decay' parameter: could you tweak it? 
 - In the good units, are there any you should split or merge? 
