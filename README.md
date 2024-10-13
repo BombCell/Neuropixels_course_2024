@@ -37,14 +37,14 @@ All the necessary data is located [here](https://rdr.ucl.ac.uk/articles/dataset/
 - Hopkins_20160722_g0_t0.imec.ap.meta
 - rawDataSample.bin
 
-Make you sure you *do not* have the following file:     
+Make you sure you *do not* have the following files:     
 - ~~spike_clusters.npy~~
 - ~~- cluster_groups.csv~~
 
 ### Download and install bombcell
 #### Requirements
 
-For now, Bombcell is only available in MATLAB. If you don't have MATLAB, you can get a free 1-month license courtesy of Mathworks. See the slack for more details. 
+For now, Bombcell is only available in MATLAB. If you don't have MATLAB, you can get a free 1-month license courtesy of Mathworks. See the slack for more details or email us: [julie.mfabre@gmail.com](mailto:julie.mfabre@gmail.com). 
 
 If you don't wish to use MATLAB, you can wait for the Python version (coming soon!) and, for this exercise, use the pre-computed metrics and plots found in this repository. We will provide a few Python functions to load and inspect the metrics here :).
 
