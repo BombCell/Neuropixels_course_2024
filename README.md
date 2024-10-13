@@ -69,15 +69,15 @@ Phy is a fast GUI to manually curate your data. Installation instructions can be
 ## Run bombcell 
 #### MATLAB users: 
 
-1. Open the [`gettingStarted_NPXcourse.mlx`](gettingStarted_NPXcourse.mlx) file in MATLAB. 
+```diff
++ 1. Open the [`gettingStarted_NPXcourse.mlx`](gettingStarted_NPXcourse.mlx) file in MATLAB. 
 
-2. Edit line 1, changing the location to where you have saved the example dataset you downloaded - for instance if you saved your dataset in `Neuropixels_course_2024_dataset` folder in your `Downloads` folder: 
-```
++ 2. Edit line 1, changing the location to where you have saved the example dataset you downloaded - for instance if you saved your dataset in `Neuropixels_course_2024_dataset` folder in your `Downloads` folder: 
+
 toy_dataset_location = 'C:\Users\Poppy\Downloads\Neuropixels_course_2024_dataset'
-``` 
 
-3. Run the sections 1-3 (Set paths, Load data & Run quality metrics)
-
++ 3. Run the sections 1-3 (Set paths, Load data & Run quality metrics)
+```
 
 #### Python users: 
 coming soon! 
@@ -94,8 +94,9 @@ When you have run everything, Bombcell will have saved several files locally, an
     
 <img src="./images/bombcell_outputs.png" width="100%">
 
-Run section 4 (Examples - accessing bombcell's metrics) to understand how the data is saved and how it can be used. 
-
+```diff
++ Run section 4 (Examples - accessing bombcell's metrics) to understand how the data is saved and how it can be used. 
+```
 
 ### Setting thresholds, checking bomcbell performance and refining
 
@@ -103,11 +104,24 @@ Run section 4 (Examples - accessing bombcell's metrics) to understand how the da
 Bombcell will output 3 types of plots that can help you get a very quick idea of how well it is performing and if any of the thresholds need to be tweaked.  
 
 1. Waveform overview 
-The plot will look something like the one below and allows you to quickly see whether the algorithm is classifying nosie and non-somatic units correctly. 
+The plot will look something like the one below and allows you to quickly see whether the algorithm is classifying noise and non-somatic units correctly. 
 <img src="./images/output_wvf.png" width="100%">
 
+```diff
+- Do the waveforms look well classified (are noise units, noisy, ect.)? 
+```
+
 2. UpSet plots 
-These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing: are there any metrics that remove too many (i.e. the majority) of units? some that remove no units? 
+These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing.
+
+```diff
++ Inspect the plots
+```
+
+```diff
+- Are there any metrics that remove too many (i.e. the majority) of units?
+- Are there any metrics that remove no units?
+```
 <img src="./images/output_upset_noise.png" width="100%">
 <img src="./images/output_upset_non-soma.png" width="100%">
 <img src="./images/output_upset_mua.png" width="100%">
@@ -118,14 +132,21 @@ The lines at the bottom indicate how the untis are classified based on the metri
 
 #### Look at bombcell's GUI 
 
-Run section 5: Inspect to bring up bombcell's GUI. This let's you visualize your units and how they were classified by bombcell.
+```diff
++ Run section 5: Inspect to bring up bombcell's GUI. This let's you visualize your units and how they were classified by bombcell.
++ flip through a few units (using the arrow keys on your keyboard)
+```
 <img src="./images/gui.png" width="100%">
 
-Are there any units that are missclassified with the spatial decay metric? Can it be resolved by tweaking some parameter? 
-
+```diff
+- Are there any units that are missclassified with the spatial decay metric? Can it be resolved by tweaking some parameter? 
+```
 #### Look at and refine the outputs in phy
 
 Once bombcell is run, its outputs are also automatically loaded in phy.
-Load up phy and take a look. Sort units by the 'spatial decay' parameter: could you tweak it? 
+Load up phy and take a look. 
+```diff
+- Sort units by the 'spatial decay' parameter: could you tweak it? 
+- In the good units, are there any you should split or merge? 
+```
 
-In the good units, are there any you should split or merge? 
