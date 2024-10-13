@@ -36,15 +36,9 @@ All the necessary data is located [here](https://rdr.ucl.ac.uk/articles/dataset/
 - pc_features_ind.npy
 - Hopkins_20160722_g0_t0.imec.ap.meta
 - rawDataSample.bin
-  
-Make you sure you *do not* have the following files:     
-- ~~cluster_groups.csv~~
+- cluster_groups.csv
+Make you sure you *do not* have the following file:     
 - ~~spike_clusters.npy~~
-
-Your folder should look similar to the image below. 
-
-<img src="./images/dataset.svg" width="50%">
-
 
 ### Download and install bombcell
 #### Requirements
