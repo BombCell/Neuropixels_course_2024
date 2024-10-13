@@ -142,7 +142,7 @@ The lines at the bottom indicate how the untis are classified based on the metri
 #### Look at bombcell's GUI 
 
 ```diff
-+ Run section 5: Inspect to bring up bombcell's GUI. This let's you visualize your units and how they were classified by bombcell.
++ Run section 5: Inspect to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
 + flip through a few units (using the arrow keys on your keyboard)
 ```
 <img src="./images/gui.png" width="100%">
