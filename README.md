@@ -32,26 +32,100 @@ Make you sure you *do not* have the following files:
 - ~~cluster_groups.csv~~
 - ~~spike_clusters.npy~~
 
-![image](https://github.com/user-attachments/assets/e3c054d4-7fdc-4843-842c-526c4911c986)
+Your folder should look similar to the image below. 
+
+<img src="./images/dataset.svg" width="50%">
+
 
 ### Download and install bombcell
-- MATLAB users
+#### Requirements
 
-- Python users 
+For now, Bombcell is only available in MATLAB. If you don't have MATLAB, you can get a free 1-month license courtesy of Mathworks. See the slack for more details. 
+
+If you don't wish to use MATLAB, you can wait for the Python version (coming soon!) and, for this exercise, use the pre-computed metrics and plots found in this repository. We will provide a few Python functions to load and inspect the metrics here :).
+
+Bombcell requires MATLAB>=2019a and the following toolboxes: 
+- Signal Processing Toolbox
+- Image Processing Toolbox
+- Statistics and Machine Learning Toolbox
+- Parallel Computing Toolbox
+
+#### To install: 
+
+- clone the repository and the dependencies. You can do this either via git/GitHub desktop or directly by downloading the .zip file and decompressing it (see the image below)
+
+<img src="./images/download_howto.svg" width="100%">
+
+- add bombcell's and the dependancies' folders to MATLAB's path. More details on how to do this [here](https://uk.mathworks.com/help/matlab/ref/pathtool.html). 
+
+#### Dependencies
+- [npy-matlab](https://github.com/kwikteam/npy-matlab), to load .npy data in.
+- [prettify-matlab](https://github.com/Julie-Fabre/prettify_matlab), to make plots pretty.
+
 ### Download and install phy
 
-## Run bombcell 
-- MATLAB users
+Phy is a fast GUI to manually curate your data. Installation instructions can be found [here](https://github.com/cortex-lab/phy/) and documentation [here](https://phy.readthedocs.io/en/latest/)
 
-- Python users 
+## Run bombcell 
+#### MATLAB users: 
+
+1. Open the [`gettingStarted_NPXcourse.mlx`](gettingStarted_NPXcourse.mlx) file in MATLAB. 
+
+2. Edit line 1, changing the location to where you have saved the example dataset you downloaded - for instance if you saved your dataset in `Neuropixels_course_2024_dataset` folder in your `Downloads` folder: 
+```
+toy_dataset_location = 'C:\Users\Poppy\Downloads\Neuropixels_course_2024_dataset'
+``` 
+
+3. Run the sections 1-3 (Set paths, Load data & Run quality metrics)
+
+
+#### Python users: 
+coming soon! 
+
 ## Inspect and refine results 
 ### Outputs 
-![image](https://github.com/user-attachments/assets/5a406f67-96b7-4a26-bec8-550eb676106e)
+When you have run everything, Bombcell will have saved several files locally, and in particular:
+- a series of cluster_xxxx.tsv that contain each unit's quality metric xxxx. These files are automatically loaded in phy and the unit IDs are in the phy format here (0-indexed).
+- in the `qMetrics` folder:
+    - a parquet file containing quality metrics for each unit and quality metric: templates._bc_qMetrics.parquet
+    - a parquet file containing parameters for each quality metric: _bc_parameters._bc_qMetrics.parquet
+    - npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
+    - a npy file indicated which spikes were detected as duplicates by bombcell: spikes._bc_duplicateSpikes.npy
+    
+<img src="./images/bombcell_outputs.png" width="100%">
 
-### General inspection
-- Using UpSet plots, Hg, Wvf. check performing well. 
-- Using the GUI. check performing well. 
-- Using Phy
-### Refine a threshold
-- Use Phy to set qMetric.spatialDecay. Find in docs.
-### Refinbe: splitting and merging 
+Run section 4 (Examples - accessing bombcell's metrics) to understand how the data is saved and how it can be used. 
+
+
+### Setting thresholds, checking bomcbell performance and refining
+
+#### Look at bombcell's output plots!
+Bombcell will output 3 types of plots that can help you get a very quick idea of how well it is performing and if any of the thresholds need to be tweaked.  
+
+1. Waveform overview 
+The plot will look something like the one below and allows you to quickly see whether the algorithm is classifying nosie and non-somatic units correctly. 
+<img src="./images/output_wvf.png" width="100%">
+
+2. UpSet plots 
+These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing: are there any metrics that remove too many (i.e. the majority) of units? some that remove no units? 
+<img src="./images/output_upset_noise.png" width="100%">
+<img src="./images/output_upset_non-soma.png" width="100%">
+<img src="./images/output_upset_mua.png" width="100%">
+
+3. Histograms of the distributions for each quality metric
+The lines at the bottom indicate how the untis are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
+<img src="./images/output_hg.png" width="100%">
+
+#### Look at bombcell's GUI 
+
+Run section 5: Inspect to bring up bombcell's GUI. This let's you visualize your units and how they were classified by bombcell.
+<img src="./images/gui.png" width="100%">
+
+Are there any units that are missclassified with the spatial decay metric? Can it be resolved by tweaking some parameter? 
+
+#### Look at and refine the outputs in phy
+
+Once bombcell is run, its outputs are also automatically loaded in phy.
+Load up phy and take a look. Sort units by the 'spatial decay' parameter: could you tweak it? 
+
+In the good units, are there any you should split or merge? 
