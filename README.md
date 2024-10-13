@@ -74,7 +74,7 @@ Phy is a fast GUI to manually curate your data. Installation instructions can be
 #### MATLAB users: 
 
 ```diff
-+ 1. Open the [`gettingStarted_NPXcourse.mlx`](gettingStarted_NPXcourse.mlx) file in MATLAB. 
++ 1. Open the [`gettingStarted_NPXcourse.mlx`](https://github.com/bombcell/Neuropixels_course_2024/blob/main/gettingStarted_NPXcourse.mlx) file in MATLAB. 
 
 + 2. Edit line 1, changing the location to where you have saved the example dataset you downloaded - for instance if you saved your dataset in `Neuropixels_course_2024_dataset` folder in your `Downloads` folder: 
 
@@ -101,6 +101,10 @@ When you have run everything, Bombcell will have saved several files locally, an
 ```diff
 + Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
 ```
+```diff
+- What is the number of spikes in the unit with the kilosort/phy ID of 2?
+- Can a unit be classified as MUA if it has more peaks than param.maxNPeaks? 
+```
 
 ### Setting thresholds, checking bomcbell performance and refining
 
@@ -125,6 +129,8 @@ These plots show the intersections and relationships between multiple sets of da
 ```
 
 ```diff
+- How many units are removed by the # peaks metric?
+-     How many of these are also removed by other metrics?
 - Are there any metrics that remove too many (i.e. the majority) of units?
 - Are there any metrics that remove no units?
 ```
@@ -135,7 +141,7 @@ These plots show the intersections and relationships between multiple sets of da
 
 3. Histograms of the distributions for each quality metric
    
-The lines at the bottom indicate how the untis are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
+The lines at the bottom indicate how the units are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
 The plot should look similar to the example one below (but yours will be slightly different!).
 <img src="./images/output_hg.png" width="100%">
 
@@ -163,7 +169,7 @@ Once bombcell is run, its outputs are also automatically loaded in phy.
 Load up phy and take a look at all the columns you have in ClusterView - they correspond to bombcell's quality metrics. 
 
 ```diff
-- Sort units by the 'spatial decay' parameter: could you tweak it? 
+- Sort units by the 'spatial decay' metric. Where would you set cut-offs? 
 - In the good units, are there any you should split or merge? 
 ```
 
