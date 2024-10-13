@@ -37,6 +37,7 @@ All the necessary data is located [here](https://rdr.ucl.ac.uk/articles/dataset/
 - Hopkins_20160722_g0_t0.imec.ap.meta
 - rawDataSample.bin
 - cluster_groups.csv
+
 Make you sure you *do not* have the following file:     
 - ~~spike_clusters.npy~~
 
