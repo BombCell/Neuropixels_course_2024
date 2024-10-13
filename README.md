@@ -179,9 +179,9 @@ Once bombcell is run, its outputs are also automatically loaded in phy.
 ```
 
 > [!TIP]
-> You can arrange the windows in phy by dragging them around
-> Fine-tune the ACG bin size by typing `:cb 0.5`
-> All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
-> To reset the GUI, launch phy with this command: `phy template-gui params.py --clear-cache --clear-state`
+> - You can arrange the windows in phy by dragging them around
+> - Fine-tune the ACG bin size by typing `:cb 0.5`
+> - All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
+> - To reset the GUI, launch phy with this command: `phy template-gui params.py --clear-cache --clear-state
 
 
