@@ -161,7 +161,16 @@ The plot should look similar to the example one below (but yours will be slightl
 <img src="./images/gui.png" width="100%">
 
 ```diff
-- Are there any units that are missclassified with the spatial decay metric? Can it be resolved by tweaking some parameter? 
+- Look at unit 19:
+-   Does it pass the spatial decay metric? 
+-   Should it? 
+-   Why does bombcell classify it as noise? 
+-   Based on this unit, where would you set the minimum spatial decay parameter?
+- Look at unit 342:
+-   Does it pass the # peaks metric? 
+-   Should it? 
+-   Why does bombcell classify it as noise? 
+-   Look at what the current maximum number of peaks a unit can have to not be classified as noise. Would you change this parameter?
 ```
 #### Look at and refine the outputs in phy
 
@@ -179,9 +188,9 @@ Once bombcell is run, its outputs are also automatically loaded in phy.
 ```
 
 > [!TIP]
-> You can arrange the windows in phy by dragging them around
-> Fine-tune the ACG bin size by typing `:cb 0.5`
-> All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
-> To reset the GUI, launch phy with this command: `phy template-gui params.py --clear-cache --clear-state`
+> - You can arrange the windows in phy by dragging them around
+> - Fine-tune the ACG bin size by typing `:cb 0.5`
+> - All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
+> - To reset the GUI, launch phy with this command: `phy template-gui params.py --clear-cache --clear-state`
 
 
