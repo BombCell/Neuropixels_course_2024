@@ -166,10 +166,22 @@ The plot should look similar to the example one below (but yours will be slightl
 #### Look at and refine the outputs in phy
 
 Once bombcell is run, its outputs are also automatically loaded in phy.
-Load up phy and take a look at all the columns you have in ClusterView - they correspond to bombcell's quality metrics. 
 
 ```diff
-- Sort units by the 'spatial decay' metric. Where would you set cut-offs? 
++ Load up the dataset in phy (run `cd <your dataset location here>` and `phy template-gui params.py` in your terminal)
++ Sort units by the 'spatial decay' parameter (see image below)
+```
+<img src="./images/phy.svg" width="100%">
+
+```diff
+- Where would you set the minimum spatial decay parameter, based on flipping through a few units? 
 - In the good units, are there any you should split or merge? 
 ```
+
+> [!TIP]
+> You can arrange the windows in phy by dragging them around
+> Fine-tune the ACG bin size by typing `:cb 0.5`
+> All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
+> To reset the GUI, launch phy with this command: `phy template-gui params.py --clear-cache --clear-state`
+
 
