@@ -123,7 +123,7 @@ The plot should look similar to the example one below (but yours will be slightl
 
 2. UpSet plots
    
-These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing. The plots should look similar to the example ones below (but yours will be slightly different!). MATLAB users: look at the plot outputed by bombcell. Python users, you can view the plots [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_noise-Upset.png), [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_nonsoma-Upset.png),  and [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_mua-Upset.png).
+These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. MOre information on UpSet plots can be found [here](https://upset.app/). Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing. The plots should look similar to the example ones below (but yours will be slightly different!). MATLAB users: look at the plot outputed by bombcell. Python users, you can view the plots [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_noise-Upset.png), [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_nonsoma-Upset.png),  and [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_mua-Upset.png).
 
 ```diff
 + Inspect the plots
@@ -149,7 +149,7 @@ The plot should look similar to the example one below (but yours will be slightl
 #### Look at bombcell's GUI 
 
 ```diff
-+ MATLAB users only - Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
++ MATLAB users only - Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units, their quality metrics, how they were classified by bombcell and where each unit lies in the distribution of quality metric values.
 + flip through a few units using your keyboard to navigate:
 +         left/right arrow: toggle between units 
 +         g : go to next good unit 
@@ -159,6 +159,7 @@ The plot should look similar to the example one below (but yours will be slightl
 +         up/down arrow: toggle between time chunks in the raw data
 +         u: brings up a input dialog to enter the unit you want to go to
 ```
+
 <img src="./images/gui.png" width="100%">
 
 Python users: look at the two screenshots of the gui: [screenshot1](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit19.png), [screenshot2](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit342.png)
