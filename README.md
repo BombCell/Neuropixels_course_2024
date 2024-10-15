@@ -190,6 +190,7 @@ Once bombcell is run, its outputs are also automatically loaded in phy. (Python 
 ```
 
 > [!TIP]
+> - An great live overview of manual curation can be found [here](https://www.youtube.com/watch?v=czdwIr-v5Yc&ab_channel=MatteoCarandini).
 > - You can arrange the windows in phy by dragging them around
 > - Fine-tune the ACG bin size by typing `:cb 0.5`
 > - All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
