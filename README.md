@@ -84,7 +84,7 @@ toy_dataset_location = 'C:\Users\Poppy\Downloads\Neuropixels_course_2024_dataset
 ```
 
 #### Python users: 
-see this repository: https://github.com/BombCell/PyBombCell-IO
+see this repository: [https://github.com/BombCell/PyBombCell-IO](https://github.com/BombCell/PyBombCell-IO)
 You will be able to look at bombcell's output, some plots and load the metrics in phy. 
 
 ## Inspect and refine results 
