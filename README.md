@@ -84,7 +84,8 @@ toy_dataset_location = 'C:\Users\Poppy\Downloads\Neuropixels_course_2024_dataset
 ```
 
 #### Python users: 
-coming soon! 
+see this repository: https://github.com/BombCell/PyBombCell-IO
+You will be able to look at bombcell's output, some plots and load the metrics in phy. 
 
 ## Inspect and refine results 
 ### Outputs 
@@ -99,7 +100,7 @@ When you have run everything, Bombcell will have saved several files locally, an
 <img src="./images/bombcell_outputs.png" width="100%">
 
 ```diff
-+ Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
++ MATLAB users only - Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
 ```
 ```diff
 - What is the number of spikes in the unit with the kilosort/phy ID of 2?
@@ -148,7 +149,7 @@ The plot should look similar to the example one below (but yours will be slightl
 #### Look at bombcell's GUI 
 
 ```diff
-+ Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
++ MATLAB users only - Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
 + flip through a few units using your keyboard to navigate:
 +         left/right arrow: toggle between units 
 +         g : go to next good unit 
