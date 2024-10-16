@@ -163,7 +163,7 @@ The plot should look similar to the example one below (but yours will be slightl
 
 <img src="./images/gui.png" width="100%">
 
-Python users: look at the two screenshots of the gui: [screenshot1](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit19.png), [screenshot2](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit342.png)
+Python users: look at the two screenshots of the gui: [screenshot1](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit19.png), [screenshot2](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit342-correct.png)
 ```diff
 - Look at unit 19:
 -   Does it pass the spatial decay metric? 
