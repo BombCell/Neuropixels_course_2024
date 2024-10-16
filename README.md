@@ -130,7 +130,7 @@ These plots show the intersections and relationships between multiple sets of da
 ```
 
 ```diff
-- How many units are removed by the # peaks metric?
+- How many units are removed by the # troughs metric?
 -     How many of these are also removed by other metrics?
 - Are there any metrics that remove too many (i.e. the majority) of units?
 - Are there any metrics that remove no units?
