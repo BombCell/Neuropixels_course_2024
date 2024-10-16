@@ -94,7 +94,8 @@ When you have run everything, Bombcell will have saved several files locally, an
 - in the `qMetrics` folder:
     - a parquet file containing quality metrics for each unit and quality metric: templates._bc_qMetrics.parquet
     - a parquet file containing parameters for each quality metric: _bc_parameters._bc_qMetrics.parquet
-    - npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
+    - (if param.extractRaw is true - in the exercise we have set it to false for the sake of simplicity) npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
+    - (if param.extractRaw is true - in the exercise we have set it to false for the sake of simplicity) npy files to calculate the raw waveform's signal-to-noise ratio: templates._bc_baselineNoiseAmplitude.npy and templates._bc_baselineNoiseAmplitudeIndex.npy
     - a npy file indicated which spikes were detected as duplicates by bombcell: spikes._bc_duplicateSpikes.npy
 
 <img src="./images/bombcell_outputs.png" width="100%">
