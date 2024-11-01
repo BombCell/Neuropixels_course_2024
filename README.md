@@ -165,7 +165,7 @@ The plot should look similar to the example one below (but yours will be slightl
 -   Does it pass the spatial decay metric? 
 -   Should it? 
 -   Why does bombcell classify it as noise? 
--   Based on this unit, where would you set the minimum spatial decay parameter?
+-   Based on this unit, would you change the minimum spatial decay parameter?
 - Look at unit 342:
 -   Does it pass the # peaks metric? 
 -   Should it? 
