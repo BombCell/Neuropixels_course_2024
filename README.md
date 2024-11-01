@@ -84,7 +84,8 @@ toy_dataset_location = 'C:\Users\Poppy\Downloads\Neuropixels_course_2024_dataset
 ```
 
 #### Python users: 
-coming soon! 
+see this repository: [https://github.com/BombCell/PyBombCell-IO](https://github.com/BombCell/PyBombCell-IO)
+You will be able to look at bombcell's output, some plots and load the metrics in phy. 
 
 ## Inspect and refine results 
 ### Outputs 
@@ -93,13 +94,14 @@ When you have run everything, Bombcell will have saved several files locally, an
 - in the `qMetrics` folder:
     - a parquet file containing quality metrics for each unit and quality metric: templates._bc_qMetrics.parquet
     - a parquet file containing parameters for each quality metric: _bc_parameters._bc_qMetrics.parquet
-    - npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
+    - (if param.extractRaw is true - in the exercise we have set it to false for the sake of simplicity) npy files containing mean raw extracted waveforms and their peak channels: templates._bc_rawWaveform.npy and templates._bc_rawWaveformPeakChannels.npy
+    - (if param.extractRaw is true - in the exercise we have set it to false for the sake of simplicity) npy files to calculate the raw waveform's signal-to-noise ratio: templates._bc_baselineNoiseAmplitude.npy and templates._bc_baselineNoiseAmplitudeIndex.npy
     - a npy file indicated which spikes were detected as duplicates by bombcell: spikes._bc_duplicateSpikes.npy
 
 <img src="./images/bombcell_outputs.png" width="100%">
 
 ```diff
-+ Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
++ MATLAB users only - Run [section 4 (Examples - accessing bombcell's metrics)] to understand how the data is saved and how it can be used. 
 ```
 ```diff
 - What is the number of spikes in the unit with the kilosort/phy ID of 2?
@@ -113,7 +115,7 @@ Bombcell will output 3 types of plots that can help you get a very quick idea of
 
 1. Waveform overview
    
-The plot should look similar to the example one below (but yours will be slightly different!). This plot allows you to quickly see whether the algorithm is classifying noise and non-somatic units correctly. 
+The plot should look similar to the example one below (but yours will be slightly different!). This plot allows you to quickly see whether the algorithm is classifying noise and non-somatic units correctly. MATLAB users: look at the plot outputed by bombcell. Python users, you can view the plot [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output1_waveforms.png)
 <img src="./images/output_wvf.png" width="100%">
 
 ```diff
@@ -122,14 +124,14 @@ The plot should look similar to the example one below (but yours will be slightl
 
 2. UpSet plots
    
-These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing. The plots should look similar to the example ones below (but yours will be slightly different!).
+These plots show the intersections and relationships between multiple sets of data, displaying both the size and composition of these intersections in a compact and easily interpretable format. MOre information on UpSet plots can be found [here](https://upset.app/). Bombcell generates 3: one for units classified as noise, one for units classified as non-somatic and one for units classified as MUA. Looking at them will give you an idea of how well bombcell is performing. The plots should look similar to the example ones below (but yours will be slightly different!). MATLAB users: look at the plot outputed by bombcell. Python users, you can view the plots [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_noise-Upset.png), [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_nonsoma-Upset.png),  and [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output3_mua-Upset.png).
 
 ```diff
 + Inspect the plots
 ```
 
 ```diff
-- How many units are removed by the # peaks metric?
+- How many units are removed by the # troughs metric?
 -     How many of these are also removed by other metrics?
 - Are there any metrics that remove too many (i.e. the majority) of units?
 - Are there any metrics that remove no units?
@@ -142,13 +144,13 @@ These plots show the intersections and relationships between multiple sets of da
 3. Histograms of the distributions for each quality metric
    
 The lines at the bottom indicate how the units are classified based on the metric: red for noise, blue for non-somatic, green for good and orange for MUA. 
-The plot should look similar to the example one below (but yours will be slightly different!).
+The plot should look similar to the example one below (but yours will be slightly different!). MATLAB users: look at the plot outputed by bombcell. Python users, you can view the plots [here](https://github.com/BombCell/PyBombCell-IO/blob/main/bombcell_output2_histograms.png)
 <img src="./images/output_hg.png" width="100%">
 
 #### Look at bombcell's GUI 
 
 ```diff
-+ Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units and how they were classified by bombcell.
++ MATLAB users only - Run [Section 5: Inspect] to bring up bombcell's GUI. This lets you visualize your units, their quality metrics, how they were classified by bombcell and where each unit lies in the distribution of quality metric values.
 + flip through a few units using your keyboard to navigate:
 +         left/right arrow: toggle between units 
 +         g : go to next good unit 
@@ -158,8 +160,10 @@ The plot should look similar to the example one below (but yours will be slightl
 +         up/down arrow: toggle between time chunks in the raw data
 +         u: brings up a input dialog to enter the unit you want to go to
 ```
+
 <img src="./images/gui.png" width="100%">
 
+Python users: look at the two screenshots of the gui: [screenshot1](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit19.png), [screenshot2](https://github.com/BombCell/PyBombCell-IO/blob/main/gui_unit342-correct.png)
 ```diff
 - Look at unit 19:
 -   Does it pass the spatial decay metric? 
@@ -174,7 +178,7 @@ The plot should look similar to the example one below (but yours will be slightl
 ```
 #### Look at and refine the outputs in phy
 
-Once bombcell is run, its outputs are also automatically loaded in phy.
+Once bombcell is run, its outputs are also automatically loaded in phy. (Python users, download all the .tsv files generated by bombcell [here](https://github.com/BombCell/PyBombCell-IO/tree/main/BC%20demo%20data).)
 
 ```diff
 + Load up the dataset in phy (run `cd <your dataset location here>` and `phy template-gui params.py` in your terminal)
@@ -188,6 +192,7 @@ Once bombcell is run, its outputs are also automatically loaded in phy.
 ```
 
 > [!TIP]
+> - An great live overview of manual curation can be found [here](https://www.youtube.com/watch?v=czdwIr-v5Yc&ab_channel=MatteoCarandini).
 > - You can arrange the windows in phy by dragging them around
 > - Fine-tune the ACG bin size by typing `:cb 0.5`
 > - All phy shortcuts are here: https://phy.readthedocs.io/en/latest/shortcuts/
