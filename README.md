@@ -37,7 +37,7 @@ All the necessary data is located [here](https://rdr.ucl.ac.uk/articles/dataset/
 - Hopkins_20160722_g0_t0.imec.ap.meta
 - rawDataSample.bin
 
-Make you sure you *do not* have the following files:     
+ONLY for this tutorial (this does *not* apply when using bombcell outside of this tutorial) - make you sure you *do not* have the following files:     
 - ~~spike_clusters.npy~~
 - ~~- cluster_groups.csv~~
 
