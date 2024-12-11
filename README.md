@@ -40,6 +40,7 @@ All the necessary data is located [here](https://rdr.ucl.ac.uk/articles/dataset/
 ONLY for this tutorial (this does *not* apply when using bombcell outside of this tutorial) - make you sure you *do not* have the following files:     
 - ~~spike_clusters.npy~~
 - ~~- cluster_groups.csv~~
+
 This is so that you don't see the previous manual curation and so you can look at units in un-biased way :)
 
 ### Download and install bombcell
